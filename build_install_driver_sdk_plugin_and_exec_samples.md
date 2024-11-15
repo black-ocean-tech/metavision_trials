@@ -1,7 +1,7 @@
-# Build install driver, SDK, plugin and exec samples.
+# Build install SDK (includes driver), plugin and exec samples.
 - 2024年11月時点、発掘した手順。
 
-## Build
+## Build, install
 - Basically, follow the instructions as written in https://github.com/prophesee-ai/openeb.
 - Install Ubuntu 24.04.1 LTS in your system.
 - Clone repo.
@@ -54,7 +54,7 @@ export HDF5_PLUGIN_PATH=$HDF5_PLUGIN_PATH:/usr/local/lib/hdf5/plugin  # On Ubunt
 ```
 - Reboot.
 - Install OpenCV for trials.
-  - conda-forgeからOpenCVがインストールされる。
+  - 仮想環境`base`にconda-forgeパッケージリポジトリからOpenCVがインストールされる。
 ```
 (base) $ conda install opencv
 ```
