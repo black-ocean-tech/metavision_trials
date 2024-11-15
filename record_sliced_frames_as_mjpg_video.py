@@ -17,7 +17,7 @@ capture_secs = 2.0
 num_frames = int(capture_fps*capture_secs)
 width = slicer.camera().width()
 height = slicer.camera().height()
-ch = 3
+ch = 3  # B, G, R
 frames = np.zeros((num_frames, height, width, ch), np.uint8)  # ←メモリ食うよ！
 # /Setup.
 
