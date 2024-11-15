@@ -1,7 +1,7 @@
 # Metavision Trials
 
 ## Get started
-- [build_install_driver_sdk_plugin_and_exec_samples.md](./build_install_driver_sdk_plugin_and_exec_samples.md)
+- [build_install_sdk_plugin_and_exec_samples.md](./build_install_sdk_plugin_and_exec_samples.md)
 
 ## Trials
 0. [slice_events_gen_frame_preview_on_cv.py](./slice_events_gen_frame_preview_on_cv.py)
