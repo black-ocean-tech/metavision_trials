@@ -1,9 +1,9 @@
+import numpy as np
+import cv2
+
 from metavision_sdk_core import BaseFrameGenerationAlgorithm
 from metavision_sdk_stream import Camera, CameraStreamSlicer, SliceCondition
 from metavision_sdk_ui import EventLoop
-
-import numpy as np
-import cv2
 
 camera = Camera.from_first_available()
 
