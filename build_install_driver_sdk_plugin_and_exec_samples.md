@@ -34,7 +34,7 @@ cmake .. -DPYBIND11_TEST=OFF
 cmake --build .
 sudo cmake --build . --target install
 ```
-- Build SDK.
+- Build, install SDK.
   - しばらくかかる。
 ```
 cd ~
@@ -43,11 +43,6 @@ mkdir build
 cd build
 cmake .. -DBUILD_TESTING=OFF
 cmake --build . --config Release -- -j 4
-```
-- Install SDK.
-```
-cd ~
-cd git/openeb/build
 sudo cmake --build . --target install
 ```
 - Edit ~/.bashrc, add following lines.
@@ -57,6 +52,11 @@ export HDF5_PLUGIN_PATH=$HDF5_PLUGIN_PATH:/usr/local/hdf5/lib/plugin  # On Ubunt
 export HDF5_PLUGIN_PATH=$HDF5_PLUGIN_PATH:/usr/local/lib/hdf5/plugin  # On Ubuntu 24.04
 ```
 - Reboot.
+- Install OpenCV for trials.
+  - conda-forgeからOpenCVがインストールされる。
+```
+(base) $ conda install opencv
+```
 
 ## Add plugin
 - Basically, follow the instructions as written in https://centuryarks.com/wp-content/uploads/2023/08/SilkyEvCamHD_Software_SettingGuide_JP_20230518a.pdf.
