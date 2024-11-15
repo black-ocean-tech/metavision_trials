@@ -18,13 +18,6 @@ sudo apt -y install apt-utils build-essential software-properties-common wget un
 sudo apt -y install libopencv-dev libboost-all-dev libusb-1.0-0-dev libprotobuf-dev protobuf-compiler
 sudo apt -y install libhdf5-dev hdf5-tools libglew-dev libglfw3-dev libcanberra-gtk-module ffmpeg
 ```
-- Install miniforge.
-  - 途中訊かれることはデフォルトで良い。
-```
-wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-bash Miniforge3-$(uname)-$(uname -m).sh
-```
-- Reboot.
 - Install pybind.
 ```
 wget https://github.com/pybind/pybind11/archive/v2.11.0.zip
@@ -51,6 +44,14 @@ sudo cmake --build . --target install
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export HDF5_PLUGIN_PATH=$HDF5_PLUGIN_PATH:/usr/local/hdf5/lib/plugin  # On Ubuntu 22.04
 export HDF5_PLUGIN_PATH=$HDF5_PLUGIN_PATH:/usr/local/lib/hdf5/plugin  # On Ubuntu 24.04
+```
+- Reboot.
+- Install miniforge.
+  - 有償anacondaパッケージリポジトリを絶対使わないようになってるcondaコマンド。
+  - 途中訊かれることはデフォルトで良い。
+```
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 - Reboot.
 - Install OpenCV for trials.
