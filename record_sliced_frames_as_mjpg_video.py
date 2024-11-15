@@ -5,6 +5,7 @@ from metavision_sdk_core import BaseFrameGenerationAlgorithm
 from metavision_sdk_stream import Camera, CameraStreamSlicer, SliceCondition
 from metavision_sdk_ui import EventLoop
 
+# Setup.
 camera = Camera.from_first_available()
 
 capture_fps = 1000
@@ -18,7 +19,9 @@ width = slicer.camera().width()
 height = slicer.camera().height()
 ch = 3
 frames = np.zeros((num_frames, height, width, ch), np.uint8)  # ←メモリ食うよ！
+# /Setup.
 
+# Capturing, buffering in mem.
 i = 0
 for slice in slicer:
     EventLoop.poll_and_dispatch()
@@ -33,7 +36,9 @@ for slice in slicer:
         break
 
 # cv2.destroyAllWindows()
+# /Capturing, buffering in mem.
 
+# Recording, post proc.
 codec = 'MJPG'
 video_file_path = "./captured.avi"
 video_fps = 60.0
@@ -44,3 +49,4 @@ for i in range(num_frames):
     writer.write(frames[i])
 
 writer.release()
+# /Recording, post proc.
