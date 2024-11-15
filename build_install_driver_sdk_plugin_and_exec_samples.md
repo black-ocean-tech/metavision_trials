@@ -1,4 +1,4 @@
-# Build install SDK (includes driver), plugin and exec samples.
+# Build install SDK (includes driver), plugin and exec samples
 - 2024年11月時点、発掘した手順。
 
 ## Build, install
@@ -71,7 +71,7 @@ cd SilkyEvCam_Plugin_Installer_for_ubuntu_v5.0.0/SilkyEvCam_Plugin_Installer_for
 ```
 - Reboot.
 
-## Exec samples.
+## Exec samples
 - Liveview.
 ```
 cd ~
