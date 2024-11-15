@@ -59,7 +59,7 @@ export HDF5_PLUGIN_PATH=$HDF5_PLUGIN_PATH:/usr/local/lib/hdf5/plugin  # On Ubunt
 (base) $ conda install opencv
 ```
 
-## Add plugin
+## Add 3rd-party-cam plugin
 - Basically, follow the instructions as written in https://centuryarks.com/wp-content/uploads/2023/08/SilkyEvCamHD_Software_SettingGuide_JP_20230518a.pdf.
 - Download, extract, install plugin.
 ```
