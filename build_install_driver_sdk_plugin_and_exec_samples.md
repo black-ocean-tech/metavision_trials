@@ -1,4 +1,5 @@
 # Build install driver, SDK, plugin and exec samples.
+- 2024年11月時点、発掘した手順。
 
 ## Build
 - Basically, follow the instructions as written in https://github.com/prophesee-ai/openeb.
