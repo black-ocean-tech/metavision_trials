@@ -28,7 +28,21 @@ cmake .. -DPYBIND11_TEST=OFF
 cmake --build .
 sudo cmake --build . --target install
 ```
+- Install miniforge.
+  - 有償anacondaパッケージリポジトリを絶対使わないようになってるcondaコマンド。
+  - 途中訊かれることは全部yes。
+```
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
+```
+- Reboot.
+- Install conda packs.
+  - 仮想環境`base`にconda-forgeパッケージリポジトリからOpenCV等がインストールされる。
+```
+(base) $ conda install numpy opencv
+```
 - Build, install SDK.
+  - venvやminiforgeで仮想環境を作らずにビルドインストールするとパスが通らないところにPythonモジュールをインストールされてハマる！！
   - しばらくかかる。
 ```
 cd ~
@@ -46,19 +60,6 @@ export HDF5_PLUGIN_PATH=$HDF5_PLUGIN_PATH:/usr/local/hdf5/lib/plugin  # On Ubunt
 export HDF5_PLUGIN_PATH=$HDF5_PLUGIN_PATH:/usr/local/lib/hdf5/plugin  # On Ubuntu 24.04
 ```
 - Reboot.
-- Install miniforge.
-  - 有償anacondaパッケージリポジトリを絶対使わないようになってるcondaコマンド。
-  - 途中訊かれることはデフォルトで良い。
-```
-wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-bash Miniforge3-$(uname)-$(uname -m).sh
-```
-- Reboot.
-- Install OpenCV for trials.
-  - 仮想環境`base`にconda-forgeパッケージリポジトリからOpenCVがインストールされる。
-```
-(base) $ conda install opencv
-```
 
 ## Add 3rd-party-cam plugin
 - Basically, follow the instructions as written in https://centuryarks.com/wp-content/uploads/2023/08/SilkyEvCamHD_Software_SettingGuide_JP_20230518a.pdf.
