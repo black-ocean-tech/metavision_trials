@@ -42,7 +42,7 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 (base) $ conda install numpy opencv
 ```
 - Build, install SDK.
-  - venvやminiforgeで仮想環境を作らずにビルドインストールするとパスが通らないところにPythonモジュールをインストールされてハマる！！
+  - venvやminiforgeで仮想環境を作らずにビルドインストールするとホストOSのパスが通らないところにPythonモジュールをインストールされてハマる！！
   - しばらくかかる。
 ```
 cd ~
