@@ -39,8 +39,8 @@ for slice in slicer:
 # /Capturing, buffering in mem.
 
 # Recording, post proc.
-codec = 'MJPG'
-video_file_path = "./captured.avi"
+codec = 'H264'
+video_file_path = "./captured.mp4"
 video_fps = 60.0
 fourcc = cv2.VideoWriter_fourcc(*codec)
 writer = cv2.VideoWriter(video_file_path, fourcc, video_fps, (width, height))
