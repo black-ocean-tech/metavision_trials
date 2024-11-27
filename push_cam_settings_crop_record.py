@@ -44,7 +44,7 @@ import numpy as np
 capture_fps = 1000
 capture_secs = 1.0
 
-delta_t_us = int(1000000/capture_fps)
+delta_t_us = int(10**6/capture_fps)
 slice_condition = SliceCondition.make_n_us(delta_t_us)
 slicer = CameraStreamSlicer(camera.move(), slice_condition)
 
