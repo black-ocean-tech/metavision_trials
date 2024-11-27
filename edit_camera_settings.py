@@ -8,7 +8,7 @@ from metavision_sdk_ui import EventLoop
 camera = Camera.from_first_available()
 
 # edit_settings
-camera.load("./example_settings.json")
+camera.load("./edited_settings.json")
 # /edit_settings
 
 delta_t_us = 10000

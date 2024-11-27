@@ -14,11 +14,11 @@
    },
    {
     "name": "bias_diff_off",
-    "value": 200
+    "value": 221
    },
    {
     "name": "bias_diff_on",
-    "value": 400
+    "value": 384
    },
    {
     "name": "bias_fo",
@@ -39,19 +39,12 @@
   ]
  },
  "roi_state": {
-    "window": [
-     {
-      "x": 160,
-      "y": 120,
-      "width": 320,
-      "height": 240
-     }
-    ],
-    "columns": [],
-    "rows": [],
-    "enabled": true,
-    "mode": "ROI"
-   }, 
+  "window": [],
+  "columns": [],
+  "rows": [],
+  "enabled": false,
+  "mode": "ROI"
+ },
  "trigger_in_state": {
   "channel_status": [
    {
