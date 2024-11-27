@@ -42,11 +42,12 @@ camera.load("./edited_settings.json")
 import numpy as np
 
 capture_fps = 1000
+capture_secs = 1.0
+
 delta_t_us = int(1000000/capture_fps)
 slice_condition = SliceCondition.make_n_us(delta_t_us)
 slicer = CameraStreamSlicer(camera.move(), slice_condition)
 
-capture_secs = 1.0
 num_frames = int(capture_fps*capture_secs)
 width = slicer.camera().width()
 height = slicer.camera().height()
@@ -74,10 +75,11 @@ for slice in slicer:
 # /capturing, buffering in mem
 
 # croping, recording, post proc
-codec = 'H264'
+video_codec = 'H264'
 video_file_path = "./captured.mp4"
 video_fps = 60.0
-fourcc = cv2.VideoWriter_fourcc(*codec)
+
+fourcc = cv2.VideoWriter_fourcc(*video_codec)
 writer = cv2.VideoWriter(video_file_path, fourcc, video_fps, (roi_w, roi_h))
 
 for i in range(num_frames):
