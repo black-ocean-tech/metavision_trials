@@ -13,7 +13,7 @@ delta_t_us = int(1000000/capture_fps)
 slice_condition = SliceCondition.make_n_us(delta_t_us)
 slicer = CameraStreamSlicer(camera.move(), slice_condition)
 
-capture_secs = 2.0
+capture_secs = 1.0
 num_frames = int(capture_fps*capture_secs)
 width = slicer.camera().width()
 height = slicer.camera().height()
