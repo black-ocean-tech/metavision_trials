@@ -29,7 +29,7 @@ print(dict_["ll_biases_state"])
 # setup
 import numpy as np
 
-capture_fps = 10000
+capture_fps = 100
 
 delta_t_us = int(10**6/capture_fps)
 slice_condition = SliceCondition.make_n_us(delta_t_us)
